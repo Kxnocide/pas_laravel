@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\OutfitsController;
+use App\Http\Controllers\SuppliersController;
 use App\Http\Controllers\WeaponsController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,8 @@ Route::get('/home', function () {
 Route::get('weapon/all', [WeaponsController::class, 'index']);
 Route::get('weapon/detail/{weapon}', [WeaponsController::class, 'show']);
 Route::get('outfit/detail/{outfit}', [OutfitsController::class, 'show']);
+Route::get('suppliers/detail/{suppliers}', [SuppliersController::class, 'show']);
 Route::get('outfit/all', [OutfitsController::class, 'index']);
+Route::get('suppliers/all', [SuppliersController::class, 'index']);
+
+
